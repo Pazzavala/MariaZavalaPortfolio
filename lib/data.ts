@@ -39,4 +39,40 @@ export const projects = [
          'At Medtronic, I contributed to advancing healthcare technology by developing software solutions that optimized device performance and data accuracy. I collaborated cross-functionally to implement innovative tools that enhanced user experiences and streamlined operational workflows. My work emphasized quality, compliance, and impactful innovation in the medical technology space.',
       src: '/medtronicDevice.png',
    },
+   {
+      category: 'Software Testing',
+      Title: 'GnuCash | Android',
+      description: '',
+      src: '/gnuCashApp.png',
+   },
+   {
+      category: 'Game Developer',
+      Title: 'Space Minesweeper',
+      description: '',
+      src: '/spaceGame.png',
+   },
+   {
+      category: 'Game Developer',
+      Title: 'Hole in the Ground',
+      description: '',
+      src: '/ballGame.png',
+   },
+   {
+      category: 'Game Developer',
+      Title: 'Earthquake Visualization',
+      description: '',
+      src: '/globeGame.png',
+   },
+   {
+      category: 'Game Developer',
+      Title: 'So You Think Ants Can Dance',
+      description: '',
+      src: '/antGame.png',
+   },
+   {
+      category: 'Game Developer',
+      Title: 'A World Made of Drawings',
+      description: '',
+      src: '/haroldGame.png',
+   },
 ];
