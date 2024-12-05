@@ -3,13 +3,22 @@ import Image from 'next/image';
 import React from 'react';
 import { Carousel, Card } from '@/components/ui/apple-cards-carousel';
 import { projects } from '@/lib/data';
+import Link from 'next/link';
 
 export function Projects() {
    const data = projects.map((project) => ({
       category: project.category,
       title: project.Title,
       src: project.src,
-      content: <DummyContent />,
+      content: (
+         <Content
+            category={project.category}
+            title={project.Title}
+            description={project.description}
+            src={project.src}
+            link={project.link}
+         />
+      ),
    }));
 
    const cards = data.map((card, index) => (
@@ -18,7 +27,7 @@ export function Projects() {
 
    return (
       <div className='w-full h-full py-20'>
-         <h2 className='max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-accent-foreground/80 dark:text-neutral-200 font-sans'>
+         <h2 className='max-w-7xl pl-4 mx-auto text-4xl md:text-5xl font-bold text-accent-foreground/80 font-sans'>
             Projects
          </h2>
          <Carousel items={cards} />
@@ -26,35 +35,47 @@ export function Projects() {
    );
 }
 
-const DummyContent = () => {
+const Content = ({
+   category,
+   title,
+   description,
+   src,
+   link,
+}: {
+   category: string;
+   title: string;
+   description: string;
+   src: string;
+   link: string;
+}) => {
    return (
-      <>
-         {[...new Array(3).fill(1)].map((_, index) => {
-            return (
-               <div
-                  key={'dummy-content' + index}
-                  className='bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4'
-               >
-                  <p className='text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto'>
-                     <span className='font-bold text-neutral-700 dark:text-neutral-200'>
-                        The first rule of Apple club is that you boast about Apple
-                        club.
-                     </span>{' '}
-                     Keep a journal, quickly jot down a grocery list, and take
-                     amazing class notes. Want to convert those notes to text? No
-                     problem. Langotiya jeetu ka mara hua yaar is ready to capture
-                     every thought.
-                  </p>
-                  <Image
-                     src='https://assets.aceternity.com/macbook.png'
-                     alt='Macbook mockup from Aceternity UI'
-                     height='500'
-                     width='500'
-                     className='md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain'
-                  />
-               </div>
-            );
-         })}
-      </>
+      <div key={title} className='p-4 md:p-14 rounded-3xl bg-card  '>
+         <p className='text-neutral-600 text-base md:text-2xl font-sans max-w-3xl mx-auto'>
+            <span className='font-bold text-secondary-foreground'>
+               {title}
+               <br />
+            </span>{' '}
+            {description == '' ? 'Description' : description}
+         </p>
+
+         <Link
+            href={link}
+            className='flex flex-col md:flex-row justify-center items-center p-8 rounded-lg overflow-hidden'
+         >
+            <h4 className='font-bold text-lg md:text-2xl lg:text-5xl min-h-2/3 text-accent-foreground'>
+               Access The Project Here
+            </h4>
+
+            {/* <div className=''> */}
+            <Image
+               src={src}
+               alt={title}
+               height='500'
+               width='500'
+               className='md:w-1/2 md:h-1/2 h-full w-full mx-auto rounded-xl object-contain'
+            />
+            {/* </div> */}
+         </Link>
+      </div>
    );
 };

@@ -12,7 +12,7 @@ export default function Hero() {
             {/* applying gradient to text className='text-transparent bg-gradient-to-r from-purple-300 to-yellow-100 bg-clip-text' */}
             <div className='absolute -bottom-12'>
                <h3 className='text-3xl sm:text-7xl'>I'm a</h3>
-               <h3 className='text-primary-foreground/80 text-3xl sm:text-7xl'>
+               <h3 className='text-destructive-foreground/80 text-3xl sm:text-7xl'>
                   <TypeAnimation
                      sequence={[
                         `Frontend Developer`,

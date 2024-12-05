@@ -3,6 +3,7 @@ import Contact from '@/components/contact';
 import Experience from '@/components/experience';
 import Hero from '@/components/hero';
 import { Projects } from '@/components/projects';
+import Skills from '@/components/skills';
 
 export default function Home() {
    return (
@@ -10,6 +11,7 @@ export default function Home() {
          <main className='w-full max-w-5xl flex flex-col gap-8 items-center sm:items-start'>
             <Hero />
             <About />
+            <Skills />
             <Experience />
             <Projects />
             <Contact />
