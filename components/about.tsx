@@ -25,7 +25,7 @@ export default function About() {
                      height={0}
                   />
                </div>
-               <p className='py-4 md:text-xl md:mr-6 leading-relaxed'>
+               <p className='py-4 md:text-xl md:mr-6 leading-relaxed text-accent-foreground/70'>
                   Hey there! I'm a recent Computer Science graduate from the
                   University of Minnesota Twin Cities, passionate about diving into
                   the world of web development. My tech stack revolves around MERN

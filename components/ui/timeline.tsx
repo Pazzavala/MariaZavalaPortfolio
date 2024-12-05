@@ -34,7 +34,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             <h2 className='text-3xl md:text-5xl mb-6 text-accent-foreground/80 dark:text-white max-w-4xl'>
                Experience
             </h2>
-            <p className='text-neutral-800/60 dark:text-neutral-300 text-sm md:text-xl max-w-3xl'>
+            <p className='text-accent-foreground/70 dark:text-neutral-300 text-sm md:text-xl max-w-3xl'>
                Experience in full-stack development, testing methodologies, and
                scalable application design across diverse projects and industries.
             </p>

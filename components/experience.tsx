@@ -21,15 +21,17 @@ export default function Experience() {
       ),
       content: (
          <div className='bg-card/30 p-4 rounded-lg'>
-            <p className='text-neutral-600/90 dark:text-neutral-200 text-lg md:text-xl font-bold'>
+            <p className='text-accent-foreground/90 text-lg md:text-xl font-bold'>
                {experience.title}
             </p>
-            <p className='text-sm'>{experience.company}</p>
-            <p className='text-xs mb-4'>{experience.timePeriod}</p>
+            <p className='text-sm text-accent-foreground/60'>{experience.company}</p>
+            <p className='text-xs mb-4 text-accent-foreground/60'>
+               {experience.timePeriod}
+            </p>
 
             <div className=''>
                {' '}
-               <p className='text-neutral-700/60 dark:text-neutral-200 text-sm md:text-base font-medium mb-8'>
+               <p className='text-accent-foreground/70 text-sm md:text-base font-medium mb-8'>
                   {experience.description}
                </p>
             </div>
