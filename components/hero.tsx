@@ -15,11 +15,11 @@ export default function Hero() {
                <h3 className='text-destructive-foreground/80 text-3xl sm:text-7xl'>
                   <TypeAnimation
                      sequence={[
-                        `Frontend Developer`,
+                        `Software Developer`,
                         1000,
                         `Creative Thinker`,
                         1000,
-                        `Full-stack Developer`,
+                        `Full Stack Developer`,
                         1000,
                      ]}
                      wrapper='span'
