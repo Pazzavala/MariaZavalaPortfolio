@@ -7,14 +7,14 @@ export default function Skills() {
          {skills.map((skill, index) => (
             <div
                key={index}
-               className='bg-card/80 flex flex-col justify-center items-center text-center md:m-2 p-3 md:p-6 rounded-xl hover:scale-110 shadow-md hover:shadow-lg transition-shadow duration-300'
+               className='bg-card/80 flex flex-col justify-center items-center text-center p-3 md:m-1 md:p-3 rounded-xl hover:scale-110 shadow-md hover:shadow-lg transition-shadow duration-300'
             >
                <skill.icon
                   color={skill.color}
                   size={50}
-                  className='mb-3 size-7 md:size-14'
+                  className='mb-3 size-7 md:size-12'
                />
-               <p className='text-base md:text-xl font-medium md:font-semibold text-secondary-foreground'>
+               <p className='text-sm md:text-base font-medium md:font-semibold text-secondary-foreground'>
                   {skill.name}
                </p>
             </div>
