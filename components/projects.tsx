@@ -17,6 +17,7 @@ export function Projects() {
             description={project.description}
             src={project.src}
             link={project.link}
+            note={project.note}
          />
       ),
    }));
@@ -41,17 +42,19 @@ const Content = ({
    description,
    src,
    link,
+   note,
 }: {
    category: string;
    title: string;
    description: string;
    src: string;
    link: string;
+   note?: string;
 }) => {
    return (
       <div key={title} className='p-4 md:p-14 rounded-3xl bg-card  '>
-         <p className='text-neutral-600 text-base md:text-2xl font-sans max-w-3xl mx-auto'>
-            <span className='font-bold text-secondary-foreground'>
+         <p className='text-neutral-600 text-sm md:text-xl font-sans max-w-3xl mx-auto'>
+            <span className='text-base md:text-2xl font-bold text-secondary-foreground'>
                {title}
                <br />
             </span>{' '}
@@ -60,11 +63,16 @@ const Content = ({
 
          <Link
             href={link}
-            className='flex flex-col md:flex-row justify-center items-center p-8 rounded-lg overflow-hidden'
+            className='flex flex-col md:flex-row justify-center items-center text-center md:text-start p-8 rounded-lg overflow-hidden'
          >
-            <h4 className='font-bold text-lg md:text-2xl lg:text-5xl min-h-2/3 text-accent-foreground'>
-               Access The Project Here
-            </h4>
+            <div>
+               <h4 className='font-bold text-lg md:text-2xl lg:text-5xl min-h-2/3 text-accent-foreground'>
+                  Access The Project Here
+               </h4>
+               <p className='my-2 md:my-4 md:mr-4 rounded-lg text-xs text-primary-foreground/70'>
+                  {note}
+               </p>
+            </div>
 
             {/* <div className=''> */}
             <Image
