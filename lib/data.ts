@@ -142,3 +142,26 @@ export const skills = [
    { name: 'Stripe', icon: SiStripe, color: '#635BFF' }, // Stripe (Purple)
    { name: 'Clerk', icon: SiClerk, color: '#000000' }, // Clerk (Black)
 ];
+
+import { IoLogoLinkedin, IoLogoGoogle } from 'react-icons/io5';
+
+export const contactInfo = [
+   {
+      name: 'LinkedIn',
+      icon: IoLogoLinkedin,
+      color: '#3178C6',
+      link: 'https://www.linkedin.com/in/mpzav/',
+   },
+   // {
+   //    name: 'GitHub',
+   //    icon: IoLogoGithub,
+   //    color: '#181717',
+   //    link: 'https://github.com/Pazzavala',
+   // },
+   {
+      name: 'Gmail',
+      icon: IoLogoGoogle,
+      color: '#181717',
+      link: 'mailto:mariap.zavala00@gmail.com',
+   },
+];
